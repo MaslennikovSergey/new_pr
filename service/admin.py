@@ -7,7 +7,6 @@ from .models import Product, Bin, Home
 admin.site.register(Bin)
 
 @admin.register(Product)  # декоратор с указанием модели
-
 class ProductAdmin(admin.ModelAdmin):
     
     list_display = ['id', 'cost', 'is_active']
