@@ -9,8 +9,20 @@ from .models import Product
 
 # Create your views here.
 
+#def index(request):
+	#return HttpResponse('Hello, World')
+
 def index(request):
-	return HttpResponse('Hello, World')
+	return render(request,'index.html')
+
+#def index(request):
+	#template = get_template('index.html')
+	#return HttpResponse(template.render())
+
+#def index(request):
+	#№cont = ('Hello', ' world')
+	#resp = StreamingHttpResponse(cont)
+	#return resp
 
 def page(request, page_num):
 		return HttpResponse(f'Page {page_num}')
@@ -40,16 +52,16 @@ def about(req, id):  # параметр req(request) - обязательный 
 		try:
 			var = Product.objects.get(pk = id)
 		except Product.DoesNotExist:
-			#return HttpResponseNotFound('NOT FOUND')
+			#r eturn HttpResponseNotFound('NOT FOUND')
 			#raise HttpResponseNotFound('NOT FOUND')
 			raise Http404('NOT FOUND')
 	
 		return HttpResponse('OK')
 
-	#def file_show(req):
-		#file = 'service\whitehouse.jpg'
-		#return FileResponse(open(file, 'rb'), as_attachment = True, filename = 'home')
+def  file_show(req):
+	file = 'service/whitehouse.jpg'
+	return FileResponse(open(file, 'rb'), as_attachment = True, filename = 'home')
 
-	#def json_show(req):
-		#data = {'cost':14, 'title':'book'}
-		#return JsonResponse(data)
+def json_show(req):
+	data = {'cost':14, 'title':'book'}
+	return JsonResponse(data)
