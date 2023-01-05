@@ -22,5 +22,6 @@ urlpatterns = [
     #path('service', index),
    	path('', include('service.urls')),
     path('admin/', admin.site.urls),
+    path('web_lib/', include('web_lib.urls')),
 
 ]
