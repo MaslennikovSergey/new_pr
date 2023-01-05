@@ -14,7 +14,7 @@
         "model": "web_lib.Book",
         "pk": 6,
         "fields": {
-            "title": "book_06",
+            "title": "book_6",
             "description": "epsilonum",
             "page_num": 540,
             "published": "2023-01-04 20:05:28.409877+00:00",
@@ -26,7 +26,7 @@
         "model": "web_lib.Book",
         "pk": 7,
         "fields": {
-            "title": "book_07",
+            "title": "book_7",
             "description": "insomnium",
             "page_num": 740,
             "published": "2023-01-04 20:05:28.409877+00:00",
