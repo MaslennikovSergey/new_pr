@@ -1,8 +1,8 @@
 {% extends 'web_lib/main.html' %}
 
 {% block content %}
-    <h1>Books</h1>
-    <div>
+    <div class = 'container'>
+        <h1>Books</h1>
         {% if books %}
             {% for book in books %}
                 <p>title:  {{book.title}}</p>
